@@ -2,22 +2,27 @@
 <html>
 
 <head>
-    <title>Secure File Upload</title>
+    <title>Secure Cloud File Sharing</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h2>Upload File</h2>
+    <h1>Secure Cloud File Sharing System</h1>
 
-    <form action="http://localhost:5000/api/files/upload" method="POST" enctype="multipart/form-data">
+    <div class="container">
 
-        <input type="file" name="file" required>
+        <h2>Upload File</h2>
 
-        <br><br>
+        <input type="file" id="fileInput">
+        <button onclick="uploadFile()">Upload</button>
 
-        <button type="submit">Upload File</button>
+        <h2>Files</h2>
+        <ul id="fileList"></ul>
 
-    </form>
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 
